@@ -31,7 +31,7 @@
                                             let
                                                 blank = builtins.mapAttrs mapper values ;
                                                 mapper = name : value : "" ;
-                                                in if builtins.typeOf blank == "string" then template string-values else builtins.throw "template is not stringable but instead is a ${ builtins.typeOf blank }" ;
+                                                in if builtins.typeOf template blank == "string" then template string-values else builtins.throw "template is not stringable but instead is a ${ builtins.typeOf blank }" ;
                                         in template-value ;
                             in
                                 {
