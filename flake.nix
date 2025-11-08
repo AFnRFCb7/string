@@ -15,7 +15,7 @@
                                                     name : value :
                                                         visitor
                                                             {
-                                                                boolean = path : value : if value then "true" else "false" ;
+                                                                bool = path : value : if value then "true" else "false" ;
                                                                 int = path : value : builtins.toString value ;
                                                                 float = path : value : builtins.toString value ;
                                                                 lambda = path : value : builtins.throw "We can not string ${ builtins.toJSON path } because it is a lambda and not stringable" ;
